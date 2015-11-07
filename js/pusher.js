@@ -1,4 +1,5 @@
 var Pusher = require('pusher');
+
 var env = require('env2')('./config.env');
 
 function updateMeal() {
