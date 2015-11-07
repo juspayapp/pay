@@ -19,6 +19,7 @@
   "homepage": "https://github.com/juspayapp/pay#readme",
   "dependencies": {
     "env2": "^2.0.4",
+    "pusher": "^1.0.6",
     "stripe": "^4.0.0"
   }
 }
