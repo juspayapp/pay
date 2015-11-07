@@ -6,10 +6,13 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
 
     <title>Juspay App</title>
+
+    <!-- google bar -->
+    <link rel="stylesheet" type="text/css" href="css/normalize.css" />
+    <link rel="stylesheet" type="text/css" href="css/component.css" />
+    <script src="js/modernizr.custom.js"></script>
 
     <!-- Bootstrap Core CSS -->
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet" integrity="sha256-MfvZlkHCEqatNoGiOXveE8FIwMzZg4W85qfrfIFBfYc= sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
@@ -37,37 +40,46 @@
 
 <body id="page-top">
 
-    <nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
+            
+
+
+
+    <nav id="mainNav" class="navbar navbar-default navbar-fixed-top" role="navigation">
         <div class="container-fluid">
             <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand page-scroll" href="#page-top">JUSPAY</a>
-            </div>
 
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav navbar-right">
-                    <li>
-                        <a class="page-scroll" href="#about">About</a>
+            <div class="navbar-header">
+                <ul id="gn-menu" class="gn-menu-main">
+                    <li class="gn-trigger">
+                        <a class="gn-icon gn-icon-menu"><span>Menu</span></a>
+
+                        <nav class="gn-menu-wrapper">
+                            <div class="gn-scroller">
+                                <ul class="gn-menu">
+                                    <li class="gn-search-item">
+                                        <input placeholder="Search" type="search" class="gn-search">
+                                        <a class="gn-icon gn-icon-search"><span>Search</span></a>
+                                    </li>
+                                    <li>
+                                        <a class="gn-icon gn-icon-article">Paid Bills</a>
+                                    </li>
+                                    <li><a class="gn-icon gn-icon-archive">My Offers</a></li>
+                                    <li><a class="gn-icon gn-icon-help">Contact Us</a></li>
+                                    <li><a class="gn-icon gn-icon-cog">Settings</a></li>
+                                    <li>
+                                        <ul class="gn-submenu">
+                                            <li><a class="gn-icon gn-icon-download">Logout</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div><!-- /gn-scroller -->
+                        </nav>
                     </li>
-                    <li>
-                        <a class="page-scroll" href="#services">Services</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#portfolio">Portfolio</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#contact">Contact</a>
-                    </li>
+                    <li><a class="logo" href="#">Juspay</a></li>
                 </ul>
             </div>
-            <!-- /.navbar-collapse -->
+
+            
         </div>
         <!-- /.container-fluid -->
     </nav>
@@ -96,10 +108,10 @@
                         <div class="portfolio-box-caption">
                             <div class="portfolio-box-caption-content">
                                 <div class="project-category text-faded">
-                                    Category
+                                    
                                 </div>
                                 <div class="project-name">
-                                    Project Name
+                                    PAY MY BILL
                                 </div>
                             </div>
                         </div>
@@ -115,10 +127,10 @@
                         <div class="portfolio-box-caption">
                             <div class="portfolio-box-caption-content">
                                 <div class="project-category text-faded">
-                                    Category
+                                    
                                 </div>
                                 <div class="project-name">
-                                    Project Name
+                                    PAY MY BILL
                                 </div>
                             </div>
                         </div>
@@ -134,10 +146,10 @@
                         <div class="portfolio-box-caption">
                             <div class="portfolio-box-caption-content">
                                 <div class="project-category text-faded">
-                                    Category
+                                    
                                 </div>
                                 <div class="project-name">
-                                    Project Name
+                                    PAY MY BILL
                                 </div>
                             </div>
                         </div>
@@ -148,15 +160,15 @@
                         <img src="img/restaurants/4.jpg" class="img-responsive" alt="">
                         <div class="restaurant-content">
                             <span class="restaurant-name">Burton's</span>
-                            <span class="restaurant-distance">600m§</span>
+                            <span class="restaurant-distance">600m</span>
                         </div> 
                         <div class="portfolio-box-caption">
                             <div class="portfolio-box-caption-content">
                                 <div class="project-category text-faded">
-                                    Category
+                                    
                                 </div>
                                 <div class="project-name">
-                                    Project Name
+                                    PAY MY BILL
                                 </div>
                             </div>
                         </div>
@@ -178,6 +190,13 @@
     <script src="js/jquery.easing.min.js"></script>
     <script src="js/jquery.fittext.js"></script>
     <script src="js/wow.min.js"></script>
+
+    <!-- Plugin menubar -->
+    <script src="js/classie.js"></script>
+    <script src="js/gnmenu.js"></script>
+    <script>
+        new gnMenu( document.getElementById( 'gn-menu' ) );
+    </script>
 
     <!-- Custom Theme JavaScript -->
     <script src="js/juspay.js"></script>
