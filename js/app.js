@@ -1,5 +1,5 @@
 var app = module.exports = {};
-var env = require('env2')('/Users/ruthuwemedimo/Desktop/hackathon/pay/config.env');
+var env = require('env2')('../config.env');
 
 var stripe = require("stripe")(process.env.stripeSecretKey);
 
