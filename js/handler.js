@@ -3,6 +3,7 @@ var app = require('./app.js');
 var fs = require('fs');
 
 var index = fs.readFileSync(__dirname+'/../public/index.html');
+var payFile = fs.readFileSync(__dirname + '/../public/pay.html');
 var headers = {"content-type": "text/html"};
 
 handlers.home = function(req,res){
@@ -18,9 +19,15 @@ handlers.file = function(req,res){
 }
 
 handlers.newCustomer = function(req,res) {
-  app.newCustomer(req,res, function(){
-    res.writeHead(200, headers);
-    res.end();
+
+  app.newCustomer(req,res, function(err, customer){
+    if (err == "null") {
+      res.writeHead(200, headers);
+      res.end("Please try again");
+    } else {
+      res.writeHead(200, headers);
+      res.end(payFile);
+    }
   })
 }
 

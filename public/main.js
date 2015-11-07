@@ -15,9 +15,11 @@ function sendRequest(token) {
   console.log(token);
   request.onreadystatechange = function (){
     if (request.readyState===4 && request.status ===200){
-      console.log(request.responseText);
+        console.log('response!!!');
+        document.body.innerHTML = request.responseText;
+    //DEAL WITH ERROR
     }
-  };
+  }
   request.open('POST', '/newCustomer');
   request.send(token);
 }
