@@ -1,0 +1,105 @@
+
+
+/* SIGNUP PROCESS */
+
+
+/* Profile Card */
+.profile {
+  position: relative;
+}
+.profile--open {
+}
+.profile--open .profile__form {
+  visibility: visible;
+  height: auto;
+  opacity: 1;
+  transform: translateY(-6em);
+  padding-top: 12em;
+}
+.profile--open .profile__fields {
+  opacity: 1;
+  visibility: visible;
+}
+.profile--open .profile__avatar {
+  transform: translate(-50%, -1.5em);
+  border-radius: 50%;
+}
+.profile__form {
+  position: relative;
+  visibility: hidden;
+  opacity: 0;
+  height: 0;
+  padding: 3em;
+  max-width: 450px;
+  margin: 0 auto; 
+}
+.profile__fields {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity .2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.juspay-form{
+  padding: 50px 0;
+}
+
+/* Form */
+.juspay-form .field {
+  position: relative;
+  margin-bottom: 2em;
+}
+.juspay-form .label {
+  position: absolute;
+  height: 2rem;
+  line-height: 2rem;
+  bottom: 0;
+  color: #999;
+  transition: all .3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.juspay-form .input {
+  width: 100%;
+  font-size: 100%;
+  border: 0;
+  padding: 0;
+  background-color: transparent;
+  height: 2rem;
+  line-height: 2rem;
+  border-bottom: 1px solid #eee;
+  color: #777;
+  transition: all .2s ease-in;
+}
+.juspay-form .input:focus {
+  outline: 0;
+  border-color: #ccc;
+}
+
+/* Using required and a faux pattern to see if input has text from http://stackoverflow.com/questions/16952526/detect-if-an-input-has-text-in-it-using-css */
+.juspay-form .input:focus + .label,
+.juspay-form input:valid + .label {
+  transform: translateY(-100%);
+  font-size: 0.75rem;
+  color: #ccc;
+}
+
+
+/* Intro animation */
+@keyframes intro {
+  from {
+    opacity: 0;
+    top: 0;
+  }
+  to {
+    opacity: 1;
+    top: 50%;
+  }
+}
+
+.juspay-info{
+    margin-top: 50px;
+    color: #8F8F8F;
+    font-size: 0.8em;
+}
+
+.gn-menu-main{
+    border-bottom: 1px solid #E0E0E0;
+}

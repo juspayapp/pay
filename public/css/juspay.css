@@ -337,6 +337,7 @@ header .header-content .header-content-inner p {
 .portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-name {
     padding: 0 15px;
     font-family: 'Proxima Nova Regular','Helvetica Neue',Arial,sans-serif;
+    text-decoration: underline;
 }
 
 .portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-category {
@@ -539,4 +540,31 @@ body {
 }
 .search .fa-search{
     color: #f36563;
+}
+
+a.icon-arrow-back{
+    cursor: hand;
+}
+
+
+.end-button{
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    height: 60px;
+    text-transform: uppercase;
+    text-align: center;
+    background-color: #f36563;
+    font-size: 23px;
+}
+
+.end-button a{
+    text-decoration: none;
+    color: white;
+    margin: auto;
+    line-height: 60px;
+}
+
+.end-button a:hover{
+    font-weight: bold;
 }
