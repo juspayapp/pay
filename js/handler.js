@@ -7,7 +7,7 @@ var pusher = require('./pusher.js');
 var index = fs.readFileSync(__dirname+'/../public/login.html');
 var payFile = fs.readFileSync(__dirname + '/../public/pay.html');
 var cardPage = fs.readFileSync(__dirname + '/../public/index.html');
-var restaurants = fs.readFileSync(__dirname + '/../public/restaurants.html')
+var restaurants = fs.readFileSync(__dirname + '/../public/search.html')
 var headers = {"content-type": "text/html"};
 
 handlers.home = function(req,res){
@@ -24,9 +24,8 @@ handlers.frontendStuff = function(req,res){
 }
 
 handlers.file = function(req,res){
-  console.log('FILE FUNC');
   var ext = (req.url).split('.')[1];
-  var file=fs.readFileSync('/pay/public/js/' + ext);
+  var file=fs.readFileSync(__dirname + '/../' +  req.url);
   res.writeHead(200, {"content-type" : "text/" +ext});
   res.end(file);
 }
