@@ -16,7 +16,7 @@ function sendRequest(token, callback) {
   request.onreadystatechange = function (){
     if (request.readyState===4 && request.status ===200){
         console.log('response!!!');
-        window.location.replace('http://localhost:5000/payFile')
+        window.location.replace('http://localhost:5000/restaurants')
     //DEAL WITH ERROR
     }
   }

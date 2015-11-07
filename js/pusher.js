@@ -1,5 +1,5 @@
 var Pusher = require('pusher');
-var env = require('env2')('../config.env');
+var env = require('env2')('/Users/ruthuwemedimo/Desktop/hackathon/pay/config.env');
 
 function updateMeal() {
   console.log('updatemeal here!!!!!!!!!!!!!');
