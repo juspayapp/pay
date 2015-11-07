@@ -36,30 +36,10 @@
         <div id="totalPrice"></div>
       </div>
     </div>
-
     <button id='payButton'>PAY</button>
-    <script>
-        var lamb = document.getElementById('food-item-lamb');
-        var price = lamb.dataset.price;
-        var elPrice = 0;
-        console.log('priiiiiiice', price);
-        var foodItemsArray = document.getElementsByClassName("item-container");
-        for(var i=0;i<foodItemsArray.length;i++){
-                foodItemsArray[i].addEventListener('click', function (event) {
-                    var element = event.target;
-                    elPrice += parseInt(element.dataset.price);
-                    console.log("ELEMENT", elPrice);
 
-                    // var yourNewTotal =
-                    document.getElementById('totalPrice').innerHTML =elPrice;
-                    // console.log(yourNewTotal)
-                    // document.getElementById('totalPrice').innerHTML=yourNewTotal
-                }, false);
-            }
-
-    </script>
   </body>
     <script src="https://js.pusher.com/3.0/pusher.min.js"></script>
-    <!-- <script src="/public/pay.js"></script> -->
+    <script src="/public/pay.js"></script>
     <script
 </html>

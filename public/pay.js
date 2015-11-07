@@ -1,3 +1,14 @@
+var elPrice = 0;
+
+var foodItemsArray = document.getElementsByClassName("item-container");
+for(var i=0;i<foodItemsArray.length;i++){
+        foodItemsArray[i].addEventListener('click', function (event) {
+            var element = event.target;
+            elPrice += parseInt(element.dataset.price);
+            document.getElementById('totalPrice').innerHTML =elPrice;
+        }, false);
+    }
+
 var request = new XMLHttpRequest();
 console.log("PAY JS");
 

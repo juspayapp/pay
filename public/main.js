@@ -8,7 +8,7 @@ form.addEventListener('submit', function(e){
   Stripe.card.createToken(form, function stripeResponseHandler(status, response){
     var token = response.id;
     sendRequest(token);
-  });m
+  });
 });
 
 function sendRequest(token, callback) {
