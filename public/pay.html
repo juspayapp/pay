@@ -8,25 +8,25 @@
     <div class="bill-container">
 
       <div class= "item-container" id="food-item-oxtail-soup" data-price="6.50">
-        <div class= "quantity">1</div>
-        <div class= "food-item"  style="float: left; margin-right: 10px;">Oxtail Soup</div>
-        <div ="price">£6.50</div>
+        <div class= "quantity" data-price="6.50">1</div>
+        <div class= "food-item" data-price="6.50" style="float: left; margin-right: 10px;">Oxtail Soup</div>
+        <div ="price" data-price="6.50">£6.50</div>
       </div>
 
       <div class= "item-container" id="egg-avacado-toast" data-price="5.50" >
-        <div class= "quantity">1</div>
-        <div class= "food-item" style="float: left; margin-right: 10px;">Egg and Avacado Toast</div>
-        <div class="price">£5.50</div>
+        <div class= "quantity" data-price="5.50">1</div>
+        <div class= "food-item" data-price="5.50" style="float: left; margin-right: 10px;">Egg and Avacado Toast</div>
+        <div class="price" data-price="5.50">£5.50</div>
       </div>
       <div class= "item-container" id="food-item-lamb" data-price="16.50">
-        <div class= "quantity">1</div>
-        <div class= "food-item"  style="float: left; margin-right: 10px;">Lamb Shank</div>
-        <div class="price">£16.50</div>
+        <div class= "quantity" data-price="16.50">1</div>
+        <div class= "food-item" data-price="16.50" style="float: left; margin-right: 10px;">Lamb Shank</div>
+        <div class="price" data-price="16.50" >£16.50</div>
       </div>
       <div class= "item-container" id="food-item-rib" data-price="23.50">
-        <div class= "quantity">1</div>
-        <div class= "food-item"  style="float: left; margin-right: 10px;">Prime Rib</div>
-        <div class="price">£23.50</div>
+        <div class= "quantity" data-price="23.50">1</div>
+        <div class= "food-item" data-price="23.50" style="float: left; margin-right: 10px;">Prime Rib</div>
+        <div class="price" data-price="23.50">£23.50</div>
       </div>
       <div id="total" data-total="52.00">
         Total = £52.00
@@ -41,14 +41,18 @@
     <script>
         var lamb = document.getElementById('food-item-lamb');
         var price = lamb.dataset.price;
+        var elPrice = 0;
         console.log('priiiiiiice', price);
         var foodItemsArray = document.getElementsByClassName("item-container");
         for(var i=0;i<foodItemsArray.length;i++){
-                foodItemsArray[i].addEventListener('click', function (element) {
-                    console.log('ELEMENT', element);
+                foodItemsArray[i].addEventListener('click', function (event) {
+                    var element = event.target;
+                    elPrice += parseInt(element.dataset.price);
+                    console.log("ELEMENT", elPrice);
+
                     // var yourNewTotal =
-                    document.getElementById('totalPrice').innerHTML = element.dataset.price;
-                    console.log(yourNewTotal)
+                    document.getElementById('totalPrice').innerHTML =elPrice;
+                    // console.log(yourNewTotal)
                     // document.getElementById('totalPrice').innerHTML=yourNewTotal
                 }, false);
             }
@@ -56,6 +60,6 @@
     </script>
   </body>
     <script src="https://js.pusher.com/3.0/pusher.min.js"></script>
-    <script src="/public/pay.js"></script>
+    <!-- <script src="/public/pay.js"></script> -->
     <script
 </html>
