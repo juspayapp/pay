@@ -33,9 +33,10 @@ handlers.newCustomer = function(req,res) {
 }
 
 handlers.payFile = function (req,res){
-  res.writeHead(200, headers);
   pusher.updateMeal();
+  res.writeHead(200, headers);
   res.end(payFile);
+
 }
 
 handlers.notFound = function(req,res){
