@@ -17,7 +17,6 @@ function sendRequest(token, callback) {
     if (request.readyState===4 && request.status ===200){
         console.log('response!!!');
         window.location.replace('http://localhost:5000/payFile')
-
     //DEAL WITH ERROR
     }
   }
