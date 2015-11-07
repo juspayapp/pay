@@ -1,5 +1,6 @@
 var Pusher = require('pusher');
-var env = require('env2')('git./config.env');
+
+var env = require('env2')('./config.env');
 
 function updateMeal() {
   console.log('updatemeal here!!!!!!!!!!!!!');
