@@ -542,8 +542,12 @@ body {
     color: #f36563;
 }
 
-a.icon-arrow-back{
-    cursor: hand;
+a .icon-arrow-back{
+    margin-top: 21px;
+}
+
+a .icon-arrow-back:hover{
+    cursor: pointer;
 }
 
 
