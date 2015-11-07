@@ -7,6 +7,7 @@ var routes = {
   '/registered': handlers.registered,
   '/payFile' : handlers.payFile,
   '/restaurants' : handlers.restaurants,
+  '/pusherUpdate' : handlers.pusherUpdate,
   '/charge': handlers.charge,
   '/frontendStuff': handlers.frontendStuff,
   '404': handlers.notFound
