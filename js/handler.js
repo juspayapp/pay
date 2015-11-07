@@ -2,6 +2,8 @@ var handlers = module.exports = {};
 var app = require('./app.js');
 var fs = require('fs');
 
+var pusher = require('./pusher.js');
+
 var index = fs.readFileSync(__dirname+'/../public/index.html');
 var payFile = fs.readFileSync(__dirname + '/../public/pay.html');
 var headers = {"content-type": "text/html"};
@@ -25,9 +27,15 @@ handlers.newCustomer = function(req,res) {
       res.end("Please try again");
     } else {
       res.writeHead(200, headers);
-      res.end(payFile);
+      res.end();
     }
   })
+}
+
+handlers.payFile = function (req,res){
+  res.writeHead(200, headers);
+  pusher.updateMeal();
+  res.end(payFile);
 }
 
 handlers.notFound = function(req,res){
