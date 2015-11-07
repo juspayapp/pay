@@ -4,7 +4,7 @@ var routes = {
   '/': handlers.home,
   '/newCustomer': handlers.newCustomer,
   '/public': handlers.file,
-  '/favicon.ico' : handlers.file,
+  '/favicon' : handlers.file,
   '/registered': handlers.registered,
   '/payFile' : handlers.payFile,
   '/restaurants' : handlers.restaurants,
