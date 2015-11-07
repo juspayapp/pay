@@ -32,8 +32,13 @@ handlers.newCustomer = function(req,res) {
   })
 }
 
+handlers.pusherUpdate = function(req,res){
+  res.writeHead(200, headers);
+    pusher.updateMeal();
+    res.end();
+}
+
 handlers.payFile = function (req,res){
-  pusher.updateMeal();
   res.writeHead(200, headers);
   res.end(payFile);
 
