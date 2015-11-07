@@ -1,13 +1,23 @@
 var elPrice = 0;
 
 var foodItemsArray = document.getElementsByClassName("item-container");
-for(var i=0;i<foodItemsArray.length;i++){
-        foodItemsArray[i].addEventListener('click', function (event) {
-            var element = event.target;
-            elPrice += parseInt(element.dataset.price);
-            document.getElementById('totalPrice').innerHTML =elPrice;
-        }, false);
-    }
+for (i = 0; i < foodItemsArray.length; i++) {
+  foodItemsArray[i].addEventListener("click", makeClickHandler(i));
+}
+
+function makeClickHandler(i) {
+  return function() {
+    pusherClick(foodItemsArray[i], pusherRequest);
+      var element = event.target;
+      elPrice += parseInt(element.dataset.price);
+      document.getElementById('totalPrice').innerHTML =elPrice;
+  }
+}
+
+function pusherRequest(){
+    request.open('GET', '/pusherUpdate');
+    request.send();
+}
 
 var request = new XMLHttpRequest();
 console.log("PAY JS");
@@ -24,16 +34,25 @@ document.getElementById('payButton').addEventListener('click', function(){
   request.send();
 })
 
-// Pusher.log = function(message) {
-//   if (window.console && window.console.log) {
-//     window.console.log(message);
-//   }
-// };
+function pusherClick (div, callback){
+  // Pusher.log = function(message) {
+  //   if (window.console && window.console.log) {
+  //     window.console.log(message);
+  //   }
+  // };
+  var pusher = new Pusher('ed940c3e2cdcdcd47f50', {
+    encrypted: true
+  });
+  callback();
+  var channel = pusher.subscribe('my_channel');
+  channel.bind('my_event', function(data) {
+    console.log("pusher event!");
+    greyOutSelectedItem(div);
+  });
+}
+
+function greyOutSelectedItem(div){
+      div.style.opacity = "0.2";
+}
 //
-// var pusher = new Pusher('ed940c3e2cdcdcd47f50', {
-//   encrypted: true
-// });
-// var channel = pusher.subscribe('test_channel');
-// channel.bind('my_event', function(data) {
-//   alert(data.message);
-// });
+// }

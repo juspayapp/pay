@@ -9,6 +9,7 @@ var routes = {
   // '/public/pay.html' : handlers.file,
   '/public/pay.js' : handlers.file,
   '/payFile' : handlers.payFile,
+  '/pusherUpdate' : handlers.pusherUpdate,
   '/charge': handlers.charge,
   '404': handlers.notFound
 };
