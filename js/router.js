@@ -3,7 +3,8 @@ var handlers = require('./handler.js');
 var routes = {
   '/': handlers.home,
   '/newCustomer': handlers.newCustomer,
-  '/public/style.css': handlers.file,
+  '/public/css/animate.min.css': handlers.file,
+  '/public/css/juspay.css' : handlers.file,
   '/public/main.js': handlers.file,
   // '/public/pay.html' : handlers.file,
   '/public/pay.js' : handlers.file,
