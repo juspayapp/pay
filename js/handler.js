@@ -38,6 +38,13 @@ handlers.payFile = function (req,res){
   res.end(payFile);
 }
 
+handlers.charge = function (req,res) {
+  app.charge(req, res, function(){
+    res.writeHead(200, headers);
+    res.end();
+  })
+}
+
 handlers.notFound = function(req,res){
   res.writeHead(404, headers);
   res.end("Can't help you there, chum!");

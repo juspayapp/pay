@@ -2,7 +2,7 @@ var app = module.exports = {};
 var env = require('env2')('/Users/ruthuwemedimo/Desktop/hackathon/pay/config.env');
 var stripe = require("stripe")(process.env.stripeSecretKey);
 
-var customerId = 'cus_7JAdjr9PIqKTFd'
+var customerId = 'cus_7JDiUWHIU61CzP'
 
 app.parseBody = function(object, callback) {
   var body = "";
@@ -26,9 +26,19 @@ app.newCustomer = function(req,res,callback) {
       description: 'description for payinguser@example.com',
       email: 'marziyeh.naaz.ahmed@gmail.com'
     }, function (err, customer) {
-      console.log("ERR>>>>>>>>",err);
-      console.log("Customer>>>>>>>", customer);
        callback(err, customer);
     })
   })
+}
+
+app.charge = function(req,res,callback){
+  stripe.charges.create({
+    amount: 400,
+    currency: "gbp",
+    customer: customerId,
+    description: "Charge for test@example.com"
+  }, function(err, charge) {
+    console.log("ERR>>>>>>>>",err);
+    console.log("Charge>>>>>>>", charge);
+  });
 }
