@@ -280,8 +280,14 @@ header .header-content .header-content-inner p {
 .portfolio-box {
     display: block;
     position: relative;
-    margin: 10px;
+    margin: 10px 0;
     max-width: 650px;
+}
+
+@media(min-width:768px) {
+    .portfolio-box {
+        margin: 10px;
+    }
 }
 
 .portfolio-box .restaurant-content{
@@ -291,6 +297,7 @@ header .header-content .header-content-inner p {
     padding: 10px 30px;
     color: white;
     font-size: 40px;
+    background-color: rgba(0,0,0,0.2); /*dim the background*/
 }
 
 .portfolio-box .restaurant-content .restaurant-name{
@@ -515,9 +522,21 @@ body {
 
 /* CUSTOM CSS */
 
-.navbar-toggle.collapsed{
-    border: 0;
-    border-radius: none;
+.search{
+    background-color: #F6F6F6;
+    padding: 10px;
+    text-align: center;
+    margin-top: 60px;
+    color: #7E7E7E;
+    height: 44px;
 }
 
-
+@media(min-width:768px) {
+    .search{
+        margin-left: 8px;
+        margin-right: 8px;
+   }
+}
+.search .fa-search{
+    color: #f36563;
+}
