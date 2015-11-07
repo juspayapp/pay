@@ -15,8 +15,7 @@ function sendRequest(token) {
   console.log(token);
   request.onreadystatechange = function (){
     if (request.readyState===4 && request.status ===200){
-        console.log('response!!!');
-        document.body.innerHTML = request.responseText;
+      document.body.innerHTML = request.responseText;
     //DEAL WITH ERROR
     }
   }

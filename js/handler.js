@@ -19,9 +19,8 @@ handlers.file = function(req,res){
 }
 
 handlers.newCustomer = function(req,res) {
-
   app.newCustomer(req,res, function(err, customer){
-    if (err == "null") {
+    if (err != null) {
       res.writeHead(200, headers);
       res.end("Please try again");
     } else {
