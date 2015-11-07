@@ -5,6 +5,9 @@ var routes = {
   '/newCustomer': handlers.newCustomer,
   '/public/style.css': handlers.file,
   '/public/main.js': handlers.file,
+  // '/public/pay.html' : handlers.file,
+  '/public/pay.js' : handlers.file,
+  '/payFile' : handlers.payFile,
   '404': handlers.notFound
 };
 
