@@ -572,3 +572,13 @@ a .icon-arrow-back:hover{
 .end-button a:hover{
     font-weight: bold;
 }
+
+.half{
+    max-width: 205px;
+    float: left;
+    margin-right: 20px;
+}
+
+.last-half {
+    margin: 0;
+}
