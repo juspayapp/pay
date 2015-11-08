@@ -66,48 +66,50 @@
 
 
     <section id="form" class="form juspay-form">
+
         <div class="container">
             <div class="row">
-                <div class="col-lg-12 text-center">
-                  <div class="profile profile--open">
-                    <div class="profile__form">
+                <form id="payment-form">
+                  <div class="col-lg-12 text-center">
+                    <div class="profile profile--open">
+                      <div class="profile__form">
 
-                      <form id="payment-form">
-                      <div class="profile__fields">
-                        <div class="field">
-                          <input type="text" id="fieldUser" class="input" required="" pattern=".*\S.*" data-stripe="number">
-                          <label for="fieldUser" class="label">Card number</label>
-                        </div>
-                        <div class="field">
-                          <input type="text" id="fieldUser" class="input" required="" pattern=".*\S.*">
-                          <label for="fieldUser" class="label">Name on card</label>
-                        </div>
-                        <div class="field half">
-                          <input type="text" id="fieldPassword" class="input" required="" pattern=".*\S.*" data-stripe="exp-month">
-                          <label for="fieldPassword" class="label">Expiry date (MM/YY)</label>
-                        </div>
-                        <div class="field half">
-                          <input type="text" id="fieldPassword" class="input" required="" pattern=".*\S.*" data-stripe="exp-year">
-                          <label for="fieldPassword" class="label">Expiry date (MM/YY)</label>
-                        </div>
-                        <div class="field half last-half">
-                          <input type="text" id="fieldEmail" class="input" required="" pattern=".*\S.*" data-stripe="cvc">
-                          <label for="fieldEmail" class="label">CVC</label>
-                        </div>
-                      </div>
-                      <p class="juspay-info">&nbsp;</p>
-                      <div>
-                          <div class="end-button">
-                            <input type = "submit"/>
+                        <div class="profile__fields">
+                          <div class="field">
+                            <input type="text" id="fieldUser" class="input" required="" pattern=".*\S.*" data-stripe="number">
+                            <label for="fieldUser" class="label">Card number</label>
                           </div>
-                      </div>
-                    </form>
+                          <div class="field">
+                            <input type="text" id="fieldUser" class="input" required="" pattern=".*\S.*">
+                            <label for="fieldUser" class="label">Name on card</label>
+                          </div>
+                          <div class="field half">
+                            <input type="text" id="fieldPassword" class="input" required="" pattern=".*\S.*" data-stripe="exp-month">
+                            <label for="fieldPassword" class="label">Expiry month (MM)</label>
+                          </div>
+                          <div class="field half last-half">
+                            <input type="text" id="fieldPassword" class="input" required="" pattern=".*\S.*" data-stripe="exp-year">
+                            <label for="fieldPassword" class="label">Expiry year (YYYY)</label>
+                          </div>
+                          <div class="field">
+                            <input type="text" id="fieldEmail" class="input" required="" pattern=".*\S.*" data-stripe="cvc">
+                            <label for="fieldEmail" class="label">CVC</label>
+                          </div>
+                        </div>
+                        <p class="juspay-info">&nbsp;</p>
+                       </div>
+                    </div>
 
-                     </div>
+                        <div class="end-button">
+                        <!--   <input type = "submit"/> -->
+                          <button type="button" class="btn btn-none" id='payButton'>PAY</button>
+                        </div>
+                        
                   </div>
-                </div>
-            </div>
-        </div>
+
+                </form>
+              </div>
+          </div>
     </section>
   <script src="/public/main.js"></script>
     <script type="text/javascript" src="https://js.stripe.com/v2/"></script>

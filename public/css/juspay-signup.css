@@ -46,13 +46,15 @@
 /* Form */
 .juspay-form .field {
   position: relative;
-  margin-bottom: 2em;
+  clear: both;
+  padding-bottom: 2em;
 }
 .juspay-form .label {
   position: absolute;
   height: 2rem;
   line-height: 2rem;
-  bottom: 0;
+  bottom: 2em;
+  z-index: -1;
   color: #999;
   transition: all .3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
@@ -95,7 +97,7 @@
 }
 
 .juspay-info{
-    margin-top: 50px;
+    margin-top: 40px;
     color: #8F8F8F;
     font-size: 0.8em;
 }
