@@ -12,7 +12,7 @@ function updateMeal() {
   pusher.port = 443;
 
   pusher.trigger('my_channel', 'my_event', {
-    "message": "Item clicked"
+    "message": "Item selected"
   });
 console.log('TRIGGER');
 }
@@ -28,7 +28,7 @@ function pusherConnect() {
   pusher.port = 443;
 
   pusher.trigger('my_channel', 'my_event', {
-    "message": "New user"
+    "message": "Someone has paid!"
   });
 console.log('NEW USER TRIGGER BABY');
 }

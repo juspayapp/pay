@@ -8,8 +8,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>Juspay App</title>
+    <!-- toast -->
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css">
 
     <!-- google bar -->
+
     <link rel="stylesheet" type="text/css" href="css/normalize.css" />
     <link rel="stylesheet" type="text/css" href="css/component.css" />
     <script src="js/modernizr.custom.js"></script>
@@ -101,14 +104,19 @@
                 <div id="totalPrice"></div>
             </div>
     </section>
-
+    <div id ="totalPrice"></div>
     <div class="end-button">
        <button type="button" class="btn btn-none" id='payButton'>PAY</button>
 
     </div>
 
     <!-- jQuery -->
+
+      <script src="/socket.io/socket.io.js"></script>
     <script src="js/jquery.js"></script>
+
+    <!-- toastr -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" integrity="sha256-Sk3nkD6mLTMOF0EOpNtsIry+s1CsaqQC1rVLTAy+0yc= sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ==" crossorigin="anonymous"></script>
@@ -126,6 +134,8 @@
 
     <script src="https://js.pusher.com/3.0/pusher.min.js"></script>
     <script src="/public/pay.js"></script>
+
+
 </body>
 
 </html>
