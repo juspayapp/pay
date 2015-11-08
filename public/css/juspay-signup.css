@@ -58,7 +58,6 @@
   color: #999;
   transition: all .3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   left: 0;
-  border: 1px solid green;
   width: 100%;
 }
 .juspay-form .profile__input {
