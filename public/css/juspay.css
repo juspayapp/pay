@@ -543,7 +543,7 @@ body {
 }
 
 a .icon-arrow-back{
-    margin-top: 21px;
+    //margin-top: 21px;
 }
 
 a .icon-arrow-back:hover{
@@ -562,14 +562,17 @@ a .icon-arrow-back:hover{
     font-size: 23px;
 }
 
-.end-button a{
+.end-button .btn-none{
     text-decoration: none;
     color: white;
     margin: auto;
     line-height: 60px;
+    background: none;
+    padding: 0;
+    font-size: 23px;
 }
 
-.end-button a:hover{
+.end-button .btn-none:hover{
     font-weight: bold;
 }
 
@@ -581,4 +584,54 @@ a .icon-arrow-back:hover{
 
 .last-half {
     margin: 0;
+}
+
+.resto-image{
+    max-height: 250px;
+    margin-bottom: 20px;
+}
+
+.item-container{
+    width: 100%;
+    max-width: 750px;
+    border-bottom: 1px solid #F6F6F6;
+    font-size: 16px;  
+    padding: 10px;  
+}
+
+.item-container2{
+    width: 100%;
+    position: absolute;
+    bottom: 60px;  
+    max-width: 750px;
+    font-size: 16px;  
+    padding: 10px;  
+}
+
+.item-container .food-item, .item-container2 .food-item2{
+    color: black;
+    padding: 5px 10px;
+}
+
+.item-container .quantity{
+    display: none;
+}
+
+
+.item-container .price, .item-container2 .price2{
+    float: right;
+    height: 32px;
+    margin-top: -26px;
+    margin-right: 10px;
+}
+
+
+.menu-info{
+    padding: 20px;
+    color: #8F8F8F;
+    text-align: center;
+}
+
+.btn-none{
+
 }
