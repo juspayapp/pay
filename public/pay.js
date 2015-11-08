@@ -4,7 +4,7 @@ var foodItemsArray = document.getElementsByClassName("item-container");
 for (i = 0; i < foodItemsArray.length; i++) {
   foodItemsArray[i].addEventListener("click", makeClickHandler(i));
 }
-
+ 
 function makeClickHandler(i) {
   return function() {
     pusherClick(foodItemsArray[i], pusherRequest);

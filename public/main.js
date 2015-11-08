@@ -13,7 +13,7 @@ form.addEventListener('submit', function(e){
     sendRequest(token);
   });
 });
-
+ 
 function sendRequest(token, callback) {
   console.log(token);
   request.onreadystatechange = function (){

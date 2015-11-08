@@ -1,7 +1,7 @@
 var handlers = module.exports = {};
 var app = require('./app.js');
 var fs = require('fs');
-
+ 
 var pusher = require('./pusher.js');
 
 var index = fs.readFileSync(__dirname+'/../public/login.html');
