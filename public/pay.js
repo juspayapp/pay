@@ -1,7 +1,7 @@
 
 var socket = io();
 var elPrice = 0;
-var clicked;
+var clicked=[];
 
 Pusher.log = function(message) {
   if (window.console && window.console.log) {
@@ -13,13 +13,13 @@ var pusher = new Pusher('ed940c3e2cdcdcd47f50', {
   encrypted: true
 });
 var channel = pusher.subscribe('my_channel');
-var counter = 0;
 channel.bind('my_event', function(data) {
   // alert(data.message);
   var message = data.message;
-  if (clicked=true){
-        toastr.success(message);
-      }
+  if(clicked[i]="true"){
+  toastr.success(message);
+}
+
 });
 
 
@@ -29,7 +29,7 @@ for (i = 0; i < foodItemsArray.length; i++) {
 }
 
 function makeClickHandler(i) {
-  clicked = true;
+  clicked[i] = "true";
   return function() {
     pusherRequest();
       var element = event.target;

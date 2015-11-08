@@ -50,7 +50,7 @@ handlers.pusherUpdate = function(req,res){
 
 handlers.payFile = function (req,res){
   res.writeHead(200, headers);
-  pusher.pusherConnect();
+  // pusher.pusherConnect();
   res.end(payFile);
 }
 
