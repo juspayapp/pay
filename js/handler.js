@@ -45,7 +45,7 @@ handlers.newCustomer = function(req,res) {
 handlers.pusherUpdate = function(req,res){
   res.writeHead(200, headers);
     pusher.updateMeal();
-    res.end();
+    res.end("pusher sent");
 }
 
 handlers.payFile = function (req,res){

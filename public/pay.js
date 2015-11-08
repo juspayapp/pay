@@ -2,14 +2,23 @@
 var socket = io();
 var elPrice = 0;
 
-// Pusher.log = function(message) {
-//   if (window.console && window.console.log) {
-//     window.console.log(message);
-//   }
-// };
-// var pusher = new Pusher('ed940c3e2cdcdcd47f50', {
-//   encrypted: true
-// });
+Pusher.log = function(message) {
+  if (window.console && window.console.log) {
+    window.console.log(message);
+  }
+};
+
+var pusher = new Pusher('ed940c3e2cdcdcd47f50', {
+  encrypted: true
+});
+var channel = pusher.subscribe('my_channel');
+var counter = 0;
+channel.bind('my_event', function(data) {
+  // alert(data.message);
+  var message = data.message;
+        toastr.success(message);
+});
+
 
 var foodItemsArray = document.getElementsByClassName("item-container");
 for (i = 0; i < foodItemsArray.length; i++) {
@@ -18,7 +27,7 @@ for (i = 0; i < foodItemsArray.length; i++) {
 
 function makeClickHandler(i) {
   return function() {
-    // pusherClick(foodItemsArray[i], pusherRequest);
+    pusherRequest();
       var element = event.target;
       console.log(typeof foodItemsArray[i]);
       elPrice += parseInt(element.dataset.price);
@@ -33,13 +42,13 @@ function makeClickHandler(i) {
 
 socket.on('send message', function(i){
 foodItemsArray[i].style.opacity = "0.2";
-  
+
 })
 
-// function pusherRequest(){
-//     request.open('GET', '/pusherUpdate');
-//     request.send();
-// }
+function pusherRequest(){
+    request.open('GET', '/pusherUpdate');
+    request.send();
+}
 
 var request = new XMLHttpRequest();
 console.log("PAY JS");
