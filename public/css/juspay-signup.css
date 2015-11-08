@@ -44,12 +44,12 @@
 }
 
 /* Form */
-.juspay-form .field {
+.juspay-form .profile__field {
   position: relative;
   clear: both;
   padding-bottom: 2em;
 }
-.juspay-form .label {
+.juspay-form .profile__label {
   position: absolute;
   height: 2rem;
   line-height: 2rem;
@@ -58,7 +58,7 @@
   color: #999;
   transition: all .3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
-.juspay-form .input {
+.juspay-form .profile__input {
   width: 100%;
   font-size: 100%;
   border: 0;
@@ -70,31 +70,19 @@
   color: #777;
   transition: all .2s ease-in;
 }
-.juspay-form .input:focus {
+.juspay-form .profile__input:focus {
   outline: 0;
   border-color: #ccc;
 }
 
 /* Using required and a faux pattern to see if input has text from http://stackoverflow.com/questions/16952526/detect-if-an-input-has-text-in-it-using-css */
-.juspay-form .input:focus + .label,
-.juspay-form input:valid + .label {
+.juspay-form .profile__input:focus + .profile__label,
+.juspay-form .profile__input:valid + .profile__label {
   transform: translateY(-100%);
   font-size: 0.75rem;
   color: #ccc;
 }
 
-
-/* Intro animation */
-@keyframes intro {
-  from {
-    opacity: 0;
-    top: 0;
-  }
-  to {
-    opacity: 1;
-    top: 50%;
-  }
-}
 
 .juspay-info{
     margin-top: 40px;
