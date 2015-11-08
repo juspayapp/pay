@@ -4,7 +4,7 @@ var foodItemsArray = document.getElementsByClassName("item-container");
 for (i = 0; i < foodItemsArray.length; i++) {
   foodItemsArray[i].addEventListener("click", makeClickHandler(i));
 }
- 
+
 function makeClickHandler(i) {
   return function() {
     pusherClick(foodItemsArray[i], pusherRequest);
@@ -24,14 +24,17 @@ console.log("PAY JS");
 
 document.getElementById('payButton').addEventListener('click', function(){
   console.log("CLICKED");
-  request.onreadystatechange = function (){
-    if (request.readyState===4 && request.status ===200){
-      console.log(request.responseText);
-    //DEAL WITH ERROR
+  var ok = confirm('Are you sure you want to pay?');
+  if (ok === true) {
+    request.onreadystatechange = function (){
+      // if (request.readyState===4 && request.status ===200){
+        window.location.replace('http://juspayapp.herokuapp.com/restaurants')
+      //DEAL WITH ERROR
+      // }
     }
+    request.open('POST', '/charge');
+    request.send();
   }
-  request.open('POST', '/charge');
-  request.send();
 })
 
 function pusherClick (div, callback){
