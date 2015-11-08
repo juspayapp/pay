@@ -51,7 +51,7 @@
             <div class="navbar-header">
                 <ul id="gn-menu" class="gn-menu-main">
                     <li class="gn-trigger">
-                       <a href=""><img class="icon-arrow-back" src="img/icon/back-arrow.png" width="28"/></a>
+                       <a href=""><span class="icon-arrow-back"></span></a>
                     </li>
                     <li><a class="logo" href="#">Sign up</a></li>
                 </ul>
@@ -71,17 +71,17 @@
                     <div class="profile__form">
 
                       <div class="profile__fields">
-                        <div class="field">
-                          <input type="text" id="fieldUser" class="input" required="" pattern=".*\S.*">
-                          <label for="fieldUser" class="label">Name</label>
+                        <div class="profile__field">
+                          <input type="text" id="fieldUser" class="profile__input" required="" pattern=".*\S.*">
+                          <label for="fieldUser" class="profile__label">Name</label>
                         </div>
-                        <div class="field">
-                          <input type="text" id="fieldEmail" class="input" required="" pattern=".*\S.*">
-                          <label for="fieldEmail" class="label">Email</label>
+                        <div class="profile__field">
+                          <input type="text" id="fieldEmail" class="profile__input" required="" pattern=".*\S.*">
+                          <label for="fieldEmail" class="profile__label">Email</label>
                         </div>
-                        <div class="field">
-                          <input type="password" id="fieldPassword" class="input" required="" pattern=".*\S.*">
-                          <label for="fieldPassword" class="label">Password</label>
+                        <div class="profile__field">
+                          <input type="password" id="fieldPassword" class="profile__input" required="" pattern=".*\S.*">
+                          <label for="fieldPassword" class="profile__label">Password</label>
                         </div>
                       </div>
                         <p class="juspay-info">We need your email address to send you receipts.</p>
@@ -92,21 +92,16 @@
         </div>
     </section>
 
-    <div>
-        <div class="end-button">
-            <a href="https://juspayapp.herokuapp.com/registered">
-                Register
-            </a>
-        </div>
+    <div class="end-button">
+        <a class="btn btn-none" href="https://juspayapp.herokuapp.com/registered">
+            Register
+        </a>
     </div>
 
     <script src="/public/login.js"></script>
 
     <!-- jQuery -->
     <script src="js/jquery.js"></script>
-
-    <!-- Bootstrap Core JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" integrity="sha256-Sk3nkD6mLTMOF0EOpNtsIry+s1CsaqQC1rVLTAy+0yc= sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ==" crossorigin="anonymous"></script>
 
     <!-- Plugin JavaScript -->
     <script src="js/jquery.easing.min.js"></script>
