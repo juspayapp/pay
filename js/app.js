@@ -27,6 +27,8 @@ app.newCustomer = function(req,res,callback) {
       description: 'description for payinguser@example.com',
       email: 'marziyeh.naaz.ahmed@gmail.com'
     }, function (err, customer) {
+        console.log('ERR>>>>>>>>', err);
+        console.log('customer>>>>>>>>', customer);
        callback(err, customer);
     })
   })

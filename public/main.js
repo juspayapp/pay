@@ -6,6 +6,9 @@ form.addEventListener('submit', function(e){
   e.preventDefault();
   console.log('clicked');
   Stripe.card.createToken(form, function stripeResponseHandler(status, response){
+    console.log('STRIPEEEE');
+    console.log('status>>>>>>', status);
+    console.log('response>>>>', response);
     var token = response.id;
     sendRequest(token);
   });
@@ -16,7 +19,7 @@ function sendRequest(token, callback) {
   request.onreadystatechange = function (){
     if (request.readyState===4 && request.status ===200){
         console.log('response!!!');
-        window.location.replace('http://localhost:5000/restaurants')
+       window.location.replace('http://localhost:5000/restaurants')
     //DEAL WITH ERROR
     }
   }
