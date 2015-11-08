@@ -1,7 +1,7 @@
 var handlers = module.exports = {};
 var app = require('./app.js');
 var fs = require('fs');
- 
+
 var pusher = require('./pusher.js');
 
 var index = fs.readFileSync(__dirname+'/../public/login.html');
@@ -50,6 +50,7 @@ handlers.pusherUpdate = function(req,res){
 
 handlers.payFile = function (req,res){
   res.writeHead(200, headers);
+  pusher.pusherConnect();
   res.end(payFile);
 }
 
