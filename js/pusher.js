@@ -12,29 +12,28 @@ function updateMeal() {
   pusher.port = 443;
 
   pusher.trigger('my_channel', 'my_event', {
-    "message": "Item selected"
+    "message": "Someone has selected an item"
   });
-console.log('TRIGGER');
 }
 
-function pusherConnect() {
-  console.log('updatemeal here!!!!!!!!!!!!!');
-  var pusher = new Pusher({
-    appId: '152833',
-    key: 'ed940c3e2cdcdcd47f50',
-    secret: process.env.pusherSecret,
-    encrypted: true
-  });
-  pusher.port = 443;
-
-  pusher.trigger('my_channel', 'my_event', {
-    "message": "Someone has paid!"
-  });
-console.log('NEW USER TRIGGER BABY');
-}
+// function pusherConnect() {
+//   console.log('updatemeal here!!!!!!!!!!!!!');
+//   var pusher = new Pusher({
+//     appId: '152833',
+//     key: 'ed940c3e2cdcdcd47f50',
+//     secret: process.env.pusherSecret,
+//     encrypted: true
+//   });
+//   pusher.port = 443;
+//
+//   pusher.trigger('my_channel', 'my_event', {
+//     "message": "Someone has paid!"
+//   });
+// console.log('NEW USER TRIGGER BABY');
+// }
 
 
 module.exports =  {
-    pusherConnect: pusherConnect,
+    // pusherConnect: pusherConnect,
     updateMeal: updateMeal
 };
