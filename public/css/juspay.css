@@ -302,7 +302,7 @@ header .header-content .header-content-inner p {
 }
 
 .portfolio-box .restaurant-content .restaurant-name{
-    float: left;   
+    float: left;
 }
 
 .portfolio-box .restaurant-content .restaurant-distance{
@@ -598,30 +598,34 @@ a .icon-arrow-back:hover{
     width: 100%;
     max-width: 750px;
     border-bottom: 1px solid #F6F6F6;
-    font-size: 16px;  
-    padding: 10px;  
+    font-size: 16px;
+    padding: 10px;
 }
 
 .item-container2{
     width: 100%;
-    margin-top: 40px;  
+    margin-top: 40px;
     margin-bottom: 60px;
     max-width: 750px;
-    font-size: 16px;  
-    padding: 10px;  
+    font-size: 16px;
+    padding: 10px;
+    clear:both;
 }
 
 .item-container .food-item, .item-container2 .food-item2{
     color: black;
     padding: 5px 10px;
 }
+/*.food-item2{
+  float:left;
+}*/
 
 .item-container .quantity{
     display: none;
 }
 
 
-.item-container .price, .item-container2 .price2{
+.item-container .price, .item-container2 .price2 #totalPrice{
     float: right;
     height: 32px;
     margin-top: -26px;
