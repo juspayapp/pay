@@ -1,5 +1,5 @@
 var handlers = require('./handler.js');
- 
+
 var routes = {
   '/': handlers.home,
   '/newCustomer': handlers.newCustomer,
