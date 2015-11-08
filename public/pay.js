@@ -1,6 +1,7 @@
 
 var socket = io();
 var elPrice = 0;
+var clicked;
 
 Pusher.log = function(message) {
   if (window.console && window.console.log) {
@@ -16,7 +17,9 @@ var counter = 0;
 channel.bind('my_event', function(data) {
   // alert(data.message);
   var message = data.message;
+  if (clicked=true){
         toastr.success(message);
+      }
 });
 
 
@@ -26,6 +29,7 @@ for (i = 0; i < foodItemsArray.length; i++) {
 }
 
 function makeClickHandler(i) {
+  clicked = true;
   return function() {
     pusherRequest();
       var element = event.target;
@@ -34,8 +38,6 @@ function makeClickHandler(i) {
       document.getElementById('totalPrice').innerHTML =elPrice;
       var str = "hello world";
       var div = foodItemsArray[i];
-      console.log(div);
-      console.log("^^^^^", event.target)
       socket.emit('user paid', i);
   }
 }
